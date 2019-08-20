@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+<!--        {{object_list}}-->
+        <h4>Title</h4>
+        <div class="container-fluid">
+            {% for instance in object_list %}
+                <p>{{instance.id}} - <a href="{{instance.get_absolute_url}}">{{instance.title}}</a>
+                    / Content: {{instance.content}}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

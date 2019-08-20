@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container"><h1>About</h1></div>
+<div class="container">
+    <p>
+        {{ title|capfirst|title }}. And our phone is: {{ my_number }}
+    </p>
+</div>
+<div class="container-fluid">
+    <div class="container"> <h3>My list is:</h3></div>
+    <div class="container">
+        <ol>
+            {% for list in my_list %}
+                {% if  list == 456 %}
+                    <li>{{ list|add:44 }}</li>
+                {% elif  list == 'abc' %}
+                    <li>This is not the network</li>
+                {% else %}
+                    <li>{{ list }}</li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+
+{% endblock %}

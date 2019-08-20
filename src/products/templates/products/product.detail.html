@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        Id is: {{object.id}} <h1>{{object.title}}</h1>
+    </div>
+    <div class="container-fluid">
+        <p>{% if object.description %}{{object.description}}{% else %}Description coming soon{% endif %}</p>
+        <p>Price: {{ object.price }}</p>
+    </div>
+
+{% endblock %}
